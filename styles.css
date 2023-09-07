@@ -1,0 +1,45 @@
+:root {
+  --bg-shift: #ff0000; /* Initial værdi for lightness */
+}
+
+body {
+  width: 30rem;
+  height: 30rem;
+}
+
+#button {
+  position: relative;
+  border-radius: 5px;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  background-color: rgb(255, 192, 203, 0.2);
+}
+
+span {
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(255, 192, 203);
+  transform-origin: left;
+  inset: 0;
+  z-index: -1;
+}
+
+.fill {
+  animation-name: fill_kf;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+/* clip-path er en css maske (top sider bund) */
+@keyframes fill_kf {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
